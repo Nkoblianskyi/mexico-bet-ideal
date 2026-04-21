@@ -158,7 +158,7 @@ export function HeroSection({ onAdvertiserModalOpen, onTermsModalOpen }: HeroSec
       <div
         className="md:hidden relative overflow-hidden text-white rounded-lg mb-1 w-full h-[120px]"
         style={{
-          backgroundImage: "url(/bg-7.jpg)",
+          backgroundImage: "url(/bg.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
