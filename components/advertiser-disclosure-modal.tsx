@@ -23,7 +23,7 @@ export function AdvertiserDisclosureModal({ isOpen, onClose }: AdvertiserDisclos
             </Button>
           </div>
         </div>
-        {/* Смуга прапора Колумбії */}
+        {/* Смуга прапора Мексики */}
         <div className="flex h-1 w-full flex-shrink-0">
           <div className="flex-1 bg-mx-green"></div>
           <div className="flex-1 bg-white"></div>

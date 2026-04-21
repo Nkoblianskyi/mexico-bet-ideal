@@ -23,7 +23,7 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
             </Button>
           </div>
         </div>
-        {/* Смуга прапора Колумбії */}
+        {/* Смуга прапора Мексики */}
         <div className="flex h-1 w-full flex-shrink-0">
           <div className="flex-1 bg-mx-green"></div>
           <div className="flex-1 bg-white"></div>
@@ -36,7 +36,7 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
             <div>
               <h3 className="text-base sm:text-lg font-bold mb-2">Términos Generales</h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Al usar Mejores Apuestas Colombia, aceptas cumplir con los siguientes términos y condiciones. Estos
+                Al usar Mejores Apuestas México, aceptas cumplir con los siguientes términos y condiciones. Estos
                 términos aplican a todos los usuarios de nuestro sitio web y servicios.
               </p>
             </div>
@@ -84,7 +84,7 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
             <div>
               <h3 className="text-base sm:text-lg font-bold mb-2">Limitación de Responsabilidad</h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Mejores Apuestas Colombia no será responsable de daños directos, indirectos, incidentales o
+                Mejores Apuestas México no será responsable de daños directos, indirectos, incidentales o
                 consecuentes derivados del uso de este sitio o la información contenida aquí.
               </p>
             </div>
@@ -96,13 +96,13 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
               </p>
               <ul className="text-sm sm:text-base text-gray-700 list-disc list-inside space-y-1">
                 <li>
-                  <strong>Coljuegos:</strong> www.coljuegos.gov.co
+                  <strong>SEGOB (DGJS):</strong> www.gob.mx/segob
                 </li>
                 <li>
-                  <strong>Línea de ayuda Colombia:</strong> 01 8000 113 113
+                  <strong>Línea de la Vida (24/7):</strong> 800 911 2000
                 </li>
                 <li>
-                  <strong>Jugadores Anónimos:</strong> www.gamblersanonymous.org
+                  <strong>Jugadores Anónimos México:</strong> 55 5544 3031
                 </li>
               </ul>
             </div>
@@ -112,7 +112,7 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
         {/* Pie */}
         <div className="bg-mx-red/10 border-t-2 border-mx-red p-3 sm:p-4 flex-shrink-0">
           <p className="text-mx-red-dark font-semibold text-center text-sm">
-            +18 | Aplican T&C | Juega con responsabilidad | Coljuegos
+            +18 | Aplican T&C | Juega con responsabilidad | SEGOB
           </p>
         </div>
       </div>

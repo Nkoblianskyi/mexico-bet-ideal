@@ -48,39 +48,39 @@ export function Ticker() {
 
       setMatches(allMatches)
     } catch (error) {
-      // Fallback — destacados partidos colombianos e internacionales
+      // Fallback — destacados partidos mexicanos e internacionales
       setMatches([
         {
           id: "1",
-          homeTeam: "Atlético Nacional",
-          awayTeam: "Millonarios",
+          homeTeam: "Club América",
+          awayTeam: "Chivas",
           date: "15 Jun",
           time: "20:00",
-          league: "Liga BetPlay",
+          league: "Liga MX",
         },
         {
           id: "2",
-          homeTeam: "América de Cali",
-          awayTeam: "Deportivo Cali",
+          homeTeam: "Cruz Azul",
+          awayTeam: "Pumas",
           date: "16 Jun",
           time: "19:30",
-          league: "Liga BetPlay",
+          league: "Liga MX",
         },
         {
           id: "3",
-          homeTeam: "Junior",
-          awayTeam: "Santa Fe",
+          homeTeam: "Tigres",
+          awayTeam: "Monterrey",
           date: "17 Jun",
           time: "18:00",
-          league: "Liga BetPlay",
+          league: "Liga MX",
         },
         {
           id: "4",
-          homeTeam: "Colombia",
-          awayTeam: "Brasil",
+          homeTeam: "México",
+          awayTeam: "Estados Unidos",
           date: "18 Jun",
           time: "20:00",
-          league: "Eliminatorias",
+          league: "Eliminatorias CONCACAF",
         },
         {
           id: "5",
@@ -100,11 +100,11 @@ export function Ticker() {
         },
         {
           id: "7",
-          homeTeam: "Boca Juniors",
-          awayTeam: "River Plate",
+          homeTeam: "Toluca",
+          awayTeam: "Atlas",
           date: "21 Jun",
           time: "19:00",
-          league: "Copa Libertadores",
+          league: "Liga MX",
         },
       ])
     } finally {

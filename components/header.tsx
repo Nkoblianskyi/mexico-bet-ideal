@@ -12,9 +12,8 @@ export function Header() {
           </div>
           <h1 className="text-[10px] font-bold whitespace-nowrap leading-tight text-center">
             <span className="text-mx-green">Mejores</span>
-            <span className="text-white"> Apuestas</span>
-            <span className="text-mx-green"> México</span>
-            <span className="text-mx-red"> .mx</span>
+            <span className="text-mx-red"> Apuestas</span>
+            <span className="text-white"> México</span>
           </h1>
         </Link>
       </div>

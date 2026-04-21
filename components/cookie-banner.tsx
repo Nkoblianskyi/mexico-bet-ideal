@@ -29,7 +29,7 @@ export function CookieBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 shadow-2xl">
-      {/* Смуга прапора Колумбії зверху */}
+      {/* Смуга прапора Мексики зверху */}
       <div className="flex h-1 w-full">
         <div className="flex-1 bg-mx-green"></div>
         <div className="flex-1 bg-white"></div>

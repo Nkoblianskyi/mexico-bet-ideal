@@ -1,5 +1,5 @@
-import ColombiaPage from "../components/colombia-page"
+import MexicoPage from "../components/mexico-page"
 
 export default function Page() {
-  return <ColombiaPage />
+  return <MexicoPage />
 }

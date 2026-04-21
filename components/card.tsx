@@ -28,8 +28,8 @@ export function Card({ site, rank }: SiteCardProps) {
   // Рамка ТОП-1 — зелений Мексики (#00A859) з теплою тінню
   const rankBorderClass =
     rank === 1
-      ? "border-[5px] border-mx-green rounded-xl shadow-[0_0_0_1px_rgba(0,168,89,0.35),0_10px_28px_rgba(0,168,89,0.28)]"
-      : "border border-gray-200 rounded-md"
+      ? "border-[5px] border-mx-green rounded-none shadow-[0_0_0_1px_rgba(0,168,89,0.35),0_10px_28px_rgba(0,168,89,0.28)]"
+      : "border border-gray-200 rounded-none"
 
   useEffect(() => {
     // Перевіряємо чи це мобільний пристрій
@@ -97,7 +97,7 @@ export function Card({ site, rank }: SiteCardProps) {
     if (rank === 7) return "EN CRECIMIENTO"
     return ""
   }
-  // Кольори бейджа під палітру прапора Колумбії (жовтий / синій / червоний)
+  // Кольори бейджа під палітру прапора Мексики (жовтий / синій / червоний)
   const getSpecialBadgeClass = () => {
     if (rank === 1) return "bg-mx-green text-mx-green-dark"
     if (rank === 2) return "bg-mx-red text-white"
@@ -112,9 +112,9 @@ export function Card({ site, rank }: SiteCardProps) {
 
   return (
     <div className="block">
-      {/* Хедер таблиці — тільки для першого елемента на desktop/tablet. Прапор Колумбії у вигляді тонкої смуги знизу. */}
+      {/* Хедер таблиці — тільки для першого елемента на desktop/tablet. Прапор Мексики у вигляді тонкої смуги знизу. */}
       {rank === 1 && (
-        <div className="hidden md:block rounded-lg overflow-hidden mb-2">
+        <div className="hidden md:block overflow-hidden mb-2">
           <div
             className="h-[40px] flex items-center px-6 text-white"
             style={{ background: "linear-gradient(90deg, #003D2B 0%, #006847 50%, #003D2B 100%)" }}
@@ -144,7 +144,7 @@ export function Card({ site, rank }: SiteCardProps) {
               <span className="text-xs font-bold">VISITAR</span>
             </div>
           </div>
-          {/* Тонка смуга кольорів прапора Колумбії */}
+          {/* Тонка смуга кольорів прапора Мексики */}
           <div className="flex h-1 w-full">
             <div className="flex-1 bg-mx-green"></div>
             <div className="flex-1 bg-white"></div>
@@ -158,14 +158,14 @@ export function Card({ site, rank }: SiteCardProps) {
         className={`hidden lg:block ${cardBgColor} ${rankBorderClass} shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden cursor-pointer`}
       >
         <a href={`/go/${site.slug}`} target="_blank" rel="nofollow noopener sponsored noreferrer" className="block">
-          {/* Ранк-бейдж (синій Колумбії) */}
-          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-3 py-1 rounded-tl-md rounded-bl-md text-sm font-bold z-10`}>
+          {/* Ранк-бейдж (синій Мексики) */}
+          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-3 py-1 text-sm font-bold z-10`}>
             #{rank}
           </div>
 
-          {/* Спеціальний бейдж — диференційований колір прапора Колумбії */}
+          {/* Спеціальний бейдж — диференційований колір прапора Мексики */}
           {shouldShowSpecialBadge && (
-            <div className={`absolute top-0 left-12 ${getSpecialBadgeClass()} px-3 py-1 rounded-tr-md rounded-br-md text-sm font-bold z-10`}>
+            <div className={`absolute top-0 left-12 ${getSpecialBadgeClass()} px-3 py-1 text-sm font-bold z-10`}>
               {getSpecialBadgeText()}
             </div>
           )}
@@ -219,7 +219,7 @@ export function Card({ site, rank }: SiteCardProps) {
 
             {/* VISIT SITE - 13% */}
             <div className="flex-[0_0_13%] text-center flex flex-col justify-center items-center h-full pl-1">
-              <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-1 xl:px-2 py-2 rounded-md text-xs xl:text-sm w-full max-w-[120px] h-[38px] xl:h-[45px] mb-1 transition-colors">
+              <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-1 xl:px-2 py-2 rounded-none text-xs xl:text-sm w-full max-w-[120px] h-[38px] xl:h-[45px] mb-1 transition-colors">
                 OBTENER BONO
               </Button>
               <div className="text-xs text-gray-500 underline">Visitar {site.name}</div>
@@ -253,14 +253,14 @@ export function Card({ site, rank }: SiteCardProps) {
         className={`hidden md:block lg:hidden ${cardBgColor} ${rankBorderClass} shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden cursor-pointer`}
       >
         <a href={`/go/${site.slug}`} target="_blank" rel="nofollow noopener sponsored noreferrer" className="block">
-          {/* Ранк-бейдж (синій Колумбії) */}
-          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-2 py-1 rounded-tl-md rounded-bl-md text-xs font-bold z-10`}>
+          {/* Ранк-бейдж (синій Мексики) */}
+          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-2 py-1 text-xs font-bold z-10`}>
             #{rank}
           </div>
 
           {/* Спеціальний бейдж — диференційований колір */}
           {shouldShowSpecialBadge && (
-            <div className={`absolute top-0 left-10 ${getSpecialBadgeClass()} px-2 py-1 rounded-tr-md rounded-br-md text-xs font-bold z-10`}>
+            <div className={`absolute top-0 left-10 ${getSpecialBadgeClass()} px-2 py-1 text-xs font-bold z-10`}>
               {getSpecialBadgeText()}
             </div>
           )}
@@ -315,7 +315,7 @@ export function Card({ site, rank }: SiteCardProps) {
 
               {/* Button - 13% */}
               <div className="flex-[0_0_13%] text-center pl-1">
-                <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-2 py-2 rounded-md text-xs w-full max-w-[100px] mx-auto transition-colors">
+                <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-2 py-2 rounded-none text-xs w-full max-w-[100px] mx-auto transition-colors">
                   OBTENER
                 </Button>
               </div>
@@ -349,14 +349,14 @@ export function Card({ site, rank }: SiteCardProps) {
         className={`md:hidden ${cardBgColor} ${rankBorderClass} shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden cursor-pointer`}
       >
         <a href={`/go/${site.slug}`} target="_blank" rel="nofollow noopener sponsored noreferrer" className="block">
-          {/* Ранк-бейдж (синій Колумбії) */}
-          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-2 py-0.5 rounded-tl-md rounded-bl-md text-[10px] font-bold z-20`}>
+          {/* Ранк-бейдж (синій Мексики) */}
+          <div className={`absolute top-0 left-0 ${rankBadgeClass} px-2 py-0.5 text-[10px] font-bold z-20`}>
             #{rank}
           </div>
 
           {/* Спеціальний бейдж — диференційований колір */}
           {shouldShowSpecialBadge && (
-            <div className={`absolute top-0 left-8 ${getSpecialBadgeClass()} px-2 py-0.5 rounded-tr-md rounded-br-md text-[10px] font-bold z-20`}>
+            <div className={`absolute top-0 left-8 ${getSpecialBadgeClass()} px-2 py-0.5 text-[10px] font-bold z-20`}>
               {getSpecialBadgeText()}
             </div>
           )}
@@ -415,7 +415,7 @@ export function Card({ site, rank }: SiteCardProps) {
 
               {/* Button - more square */}
               <div className="flex justify-center mt-2">
-                <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-3 py-1.5 rounded-md text-sm transition-colors w-full">
+                <Button className="bg-green-primary hover:bg-green-hover text-white font-bold px-3 py-1.5 rounded-none text-sm transition-colors w-full">
                   OBTENER BONO
                 </Button>
               </div>

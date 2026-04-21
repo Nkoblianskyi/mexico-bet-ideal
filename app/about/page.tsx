@@ -1,27 +1,13 @@
-import {
-  Info,
-  Award,
-  ShieldCheck,
-  Target,
-  Users,
-  Sparkles,
-  AlertTriangle,
-  Clock,
-  Wallet,
-  Smartphone,
-  Radio,
-  MousePointerClick,
-} from "lucide-react"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
 
 const criterios = [
-  { label: "Licencia y Regulación", text: "Solo destacamos plataformas licenciadas por Coljuegos." },
+  { label: "Licencia y Regulación", text: "Solo destacamos plataformas con permiso vigente otorgado por la SEGOB (DGJS)." },
   { label: "Seguridad y Confianza", text: "Encriptación SSL, protección KYC y herramientas de juego responsable." },
-  { label: "Cobertura de Mercados", text: "Liga BetPlay, Champions, NBA, MLB, UFC, eSports y más." },
+  { label: "Cobertura de Mercados", text: "Liga MX, Champions, NBA, MLB, NFL, UFC, Box, eSports y más." },
   { label: "Cuotas Competitivas", text: "Comparación directa de cuotas en eventos deportivos principales." },
   { label: "Valor de Promociones", text: "Análisis transparente de rollover, cuota mínima y plazos." },
-  { label: "Métodos de Pago", text: "PSE, Efecty, Nequi, Daviplata y tarjetas locales." },
+  { label: "Métodos de Pago", text: "SPEI, OXXO, CoDi, Mercado Pago, BBVA y tarjetas Visa/Mastercard." },
   { label: "Atención al Cliente", text: "Soporte en español 24/7 vía chat, correo y teléfono." },
   { label: "Plataforma Móvil", text: "Apps nativas Android/iOS y web móvil optimizada." },
   { label: "Apuestas en Vivo", text: "In-play, cash out, bet builder y transmisiones HD." },
@@ -29,163 +15,152 @@ const criterios = [
 ]
 
 const proceso = [
-  { icon: Users, text: "Registro real y verificación de identidad (KYC)." },
-  { icon: Wallet, text: "Pruebas de depósito y retiro con dinero real." },
-  { icon: Target, text: "Apuestas en diferentes deportes y mercados." },
-  { icon: Radio, text: "Evaluación de atención al cliente en tiempo real." },
-  { icon: Smartphone, text: "Pruebas de rendimiento en app móvil y web." },
-  { icon: MousePointerClick, text: "Revisión detallada de términos de promociones." },
+  "Registro real y verificación de identidad (KYC).",
+  "Pruebas de depósito y retiro con dinero real (MXN).",
+  "Apuestas en diferentes deportes y mercados.",
+  "Evaluación de atención al cliente en tiempo real.",
+  "Pruebas de rendimiento en app móvil y web.",
+  "Revisión detallada de términos de promociones.",
 ]
 
 const promesas = [
-  { accent: "yellow" as const, title: "Transparencia", text: "Divulgación completa del proceso de evaluación y relaciones comerciales." },
-  { accent: "blue" as const, title: "Precisión", text: "Actualizaciones constantes para mantener información precisa y relevante." },
-  { accent: "red" as const, title: "Responsabilidad", text: "Promovemos comportamientos seguros y juego responsable." },
-  { accent: "blue" as const, title: "Experiencia", text: "Evaluaciones realizadas por especialistas del sector de apuestas." },
+  { title: "Transparencia", text: "Divulgación completa del proceso de evaluación y relaciones comerciales." },
+  { title: "Precisión", text: "Actualizaciones constantes para mantener información precisa y relevante." },
+  { title: "Responsabilidad", text: "Promovemos comportamientos seguros y juego responsable." },
+  { title: "Experiencia", text: "Evaluaciones realizadas por especialistas del sector de apuestas." },
 ]
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-6 sm:py-8 max-w-5xl">
+    <div className="container mx-auto px-4 py-8 sm:py-10 max-w-5xl">
       <PageHero
-        icon={Info}
-        badge="QUIÉNES SOMOS"
-        title="Sobre Mejores Apuestas Colombia"
-        subtitle="Tu destino preferido para reseñas y análisis de casas de apuestas en Colombia"
+        badge="Quiénes somos"
+        title="Sobre Mejores Apuestas México"
+        subtitle="Guía editorial independiente dedicada al análisis y la comparación de casas de apuestas con permiso vigente en los Estados Unidos Mexicanos."
       />
 
-      {/* Propósito */}
-      <div className="mb-6">
-        <InfoCard accent="yellow" icon={Sparkles} title="Nuestro Propósito">
+      <div className="space-y-5">
+        <InfoCard number="01" title="Nuestro Propósito">
           <p>
-            En <strong>Mejores Apuestas Colombia</strong> nos dedicamos a entregar la información más completa,
-            confiable y actualizada sobre las casas de apuestas online en Colombia. Simplificamos tu decisión frente
-            a la gran cantidad de operadores licenciados disponibles en el país.
+            En <strong>Mejores Apuestas México</strong> nos dedicamos a entregar información completa,
+            confiable y actualizada sobre las casas de apuestas online en México. Simplificamos tu
+            decisión frente a la gran cantidad de operadores con permiso vigente disponibles en el país.
           </p>
         </InfoCard>
-      </div>
 
-      {/* Evaluación */}
-      <div className="mb-6">
-        <InfoCard accent="blue" icon={Award} title="Cómo Evaluamos las Casas de Apuestas">
+        <InfoCard number="02" title="Cómo Evaluamos las Casas de Apuestas">
           <p>
-            Nuestro marco de evaluación se basa en años de experiencia y en un profundo entendimiento de lo que
-            valoran los apostadores colombianos. Analizamos cada operador en múltiples factores.
+            Nuestro marco de evaluación se basa en años de experiencia y en un entendimiento profundo
+            de lo que valoran los apostadores mexicanos. Analizamos cada operador aplicando los
+            criterios listados a continuación.
           </p>
         </InfoCard>
-      </div>
 
-      {/* Критерії */}
-      <h2 className="text-xl sm:text-2xl font-extrabold text-mx-green-dark mb-3 mt-8">
-        Nuestros Criterios de Evaluación
-      </h2>
-      <div className="grid gap-3 sm:grid-cols-2 mb-8">
-        {criterios.map((c, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-3 hover:border-mx-green-mid/40 hover:shadow-sm transition"
-          >
-            <div className="w-8 h-8 rounded-md bg-mx-green-mid/10 flex items-center justify-center flex-shrink-0">
-              <ShieldCheck className="w-4 h-4 text-mx-green-mid" />
-            </div>
-            <div>
-              <h4 className="text-sm font-bold text-mx-green-dark mb-0.5">{c.label}</h4>
-              <p className="text-sm text-gray-700 leading-snug">{c.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Метод */}
-      <h2 className="text-xl sm:text-2xl font-extrabold text-mx-green-dark mb-3">Nuestro Método</h2>
-      <p className="text-gray-700 leading-relaxed mb-4">
-        Cada casa de apuestas mostrada en el sitio pasa por una evaluación exhaustiva. Nuestro equipo abre cuentas
-        reales, realiza depósitos, hace apuestas y evalúa el servicio al cliente para ofrecer perspectivas auténticas
-        basadas en experiencia real de usuario.
-      </p>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-        {proceso.map((p, i) => {
-          const Icon = p.icon
-          return (
-            <div
-              key={i}
-              className="bg-gradient-to-br from-mx-green-dark to-mx-green-mid text-white rounded-lg p-4 flex items-center gap-3 shadow-sm"
-            >
-              <div className="w-9 h-9 rounded-md bg-mx-green flex items-center justify-center flex-shrink-0">
-                <Icon className="w-5 h-5 text-mx-green-dark" />
+        <section className="bg-white border border-gray-200 p-5 sm:p-6">
+          <h3 className="flex items-baseline gap-3 text-sm sm:text-base font-bold uppercase tracking-wider text-gray-900 border-b border-gray-200 pb-2 mb-4">
+            <span className="text-mx-green-dark font-extrabold tabular-nums">03</span>
+            <span>Criterios de Evaluación</span>
+          </h3>
+          <dl className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+            {criterios.map((c, i) => (
+              <div key={i} className="border-l-2 border-mx-green-dark/70 pl-4 py-1">
+                <dt className="text-[13px] font-bold uppercase tracking-wider text-gray-900">
+                  <span className="text-mx-green-dark mr-2 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {c.label}
+                </dt>
+                <dd className="text-sm text-gray-700 leading-relaxed mt-1">{c.text}</dd>
               </div>
-              <p className="text-sm leading-snug">{p.text}</p>
-            </div>
-          )
-        })}
-      </div>
+            ))}
+          </dl>
+        </section>
 
-      {/* Довіра */}
-      <div className="mb-6">
-        <InfoCard accent="red" icon={ShieldCheck} title="Por Qué Confiar en Nuestras Reseñas">
+        <section className="bg-white border border-gray-200 p-5 sm:p-6">
+          <h3 className="flex items-baseline gap-3 text-sm sm:text-base font-bold uppercase tracking-wider text-gray-900 border-b border-gray-200 pb-2 mb-4">
+            <span className="text-mx-green-dark font-extrabold tabular-nums">04</span>
+            <span>Metodología de Prueba</span>
+          </h3>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Cada casa de apuestas mostrada en el sitio pasa por una evaluación exhaustiva. Nuestro
+            equipo abre cuentas reales, realiza depósitos, hace apuestas y evalúa el servicio al
+            cliente para ofrecer perspectivas auténticas basadas en experiencia real de usuario.
+          </p>
+          <ol className="divide-y divide-gray-200 border-y border-gray-200">
+            {proceso.map((p, i) => (
+              <li key={i} className="flex items-start gap-4 py-3 text-sm text-gray-800">
+                <span className="text-mx-green-dark font-extrabold tabular-nums text-base w-8 flex-shrink-0">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="leading-relaxed">{p}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <InfoCard number="05" title="Por Qué Confiar en Nuestras Reseñas">
           <p>
-            La independencia editorial es el fundamento de nuestro trabajo. Aunque podemos recibir compensación cuando
-            accedes a plataformas a través de nuestro sitio, esto <strong>nunca</strong> afecta nuestros rankings o
-            evaluaciones. Nuestro equipo editorial mantiene autonomía total.
+            La independencia editorial es el fundamento de nuestro trabajo. Aunque podemos recibir
+            compensación cuando accedes a plataformas a través de nuestro sitio, esto{" "}
+            <strong>nunca</strong> afecta nuestros rankings o evaluaciones. Nuestro equipo editorial
+            mantiene autonomía total.
           </p>
         </InfoCard>
-      </div>
 
-      {/* Обіцянки */}
-      <h2 className="text-xl sm:text-2xl font-extrabold text-mx-green-dark mb-3">Nuestra Promesa</h2>
-      <div className="grid gap-3 sm:grid-cols-2 mb-8">
-        {promesas.map((p, i) => (
-          <InfoCard key={i} accent={p.accent} title={p.title}>
-            <p>{p.text}</p>
-          </InfoCard>
-        ))}
-      </div>
+        <section className="bg-white border border-gray-200 p-5 sm:p-6">
+          <h3 className="flex items-baseline gap-3 text-sm sm:text-base font-bold uppercase tracking-wider text-gray-900 border-b border-gray-200 pb-2 mb-4">
+            <span className="text-mx-green-dark font-extrabold tabular-nums">06</span>
+            <span>Nuestra Promesa</span>
+          </h3>
+          <div className="grid gap-px bg-gray-200 sm:grid-cols-2 border border-gray-200">
+            {promesas.map((p, i) => (
+              <div key={i} className="bg-white p-4 sm:p-5">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-mx-green-dark mb-1.5">
+                  {String(i + 1).padStart(2, "0")} · {p.title}
+                </h4>
+                <p className="text-sm text-gray-700 leading-relaxed">{p.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* Гра відповідально */}
-      <div className="mb-6">
-        <InfoCard accent="yellow" icon={ShieldCheck} title="Juego Responsable">
+        <InfoCard number="07" title="Juego Responsable">
           <p>
-            Defendemos los principios del juego responsable. Las apuestas deben ser entretenimiento y nunca causar
-            dificultades financieras o personales.
+            Defendemos los principios del juego responsable. Las apuestas deben ser entretenimiento
+            y nunca causar dificultades financieras o personales.
           </p>
-          <ul className="text-sm space-y-1 mt-2">
-            <li>• Herramientas de autoexclusión y límites de gasto.</li>
-            <li>• Acceso a organizaciones de ayuda contra la ludopatía.</li>
-            <li>• Procedimientos de verificación de edad (+18).</li>
-            <li>• Términos y políticas transparentes.</li>
+          <ul className="mt-3 divide-y divide-gray-200 border-y border-gray-200">
+            <li className="py-2 text-sm">— Herramientas de autoexclusión y límites de gasto.</li>
+            <li className="py-2 text-sm">— Acceso a organizaciones de ayuda contra la ludopatía.</li>
+            <li className="py-2 text-sm">— Procedimientos de verificación de edad (+18).</li>
+            <li className="py-2 text-sm">— Términos y políticas transparentes.</li>
           </ul>
         </InfoCard>
-      </div>
 
-      {/* Актуальність */}
-      <div className="mb-6">
-        <InfoCard accent="blue" icon={Clock} title="Información Siempre Actualizada">
+        <InfoCard number="08" title="Información Siempre Actualizada">
           <p>
-            El sector de apuestas online cambia rápidamente. Monitoreamos el mercado colombiano constantemente para
-            que nuestras evaluaciones y rankings reflejen con precisión el estado actual de cada casa: nuevos métodos
-            de pago, cambios en bonos o actualizaciones de licencia Coljuegos.
+            El sector de apuestas online cambia rápidamente. Monitoreamos el mercado mexicano de
+            forma constante para que nuestras evaluaciones y rankings reflejen con precisión el
+            estado actual de cada casa: nuevos métodos de pago, cambios en bonos o actualizaciones
+            del permiso SEGOB.
           </p>
         </InfoCard>
-      </div>
 
-      {/* Важливе попередження */}
-      <div className="mt-8 rounded-lg border-l-4 border-mx-red bg-mx-red/5 p-5">
-        <div className="flex items-start gap-3">
-          <div className="w-9 h-9 rounded-md bg-mx-red/15 flex items-center justify-center flex-shrink-0">
-            <AlertTriangle className="w-5 h-5 text-mx-red" />
+        <section className="bg-white border border-gray-200 border-l-4 border-l-gray-900 p-5 sm:p-6">
+          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-gray-900 mb-2">
+            Aviso Importante
           </div>
-          <div>
-            <h3 className="text-mx-red-dark font-extrabold text-base mb-1">Aviso Importante</h3>
-            <p className="text-sm text-gray-800 leading-relaxed mb-1">
-              El juego debe ser una actividad de entretenimiento. Nunca apuestes más de lo que puedas permitirte
-              perder y mantén siempre hábitos de juego responsable.
-            </p>
-            <p className="text-sm text-gray-800 leading-relaxed">
-              Si el juego se convierte en un problema, busca ayuda en organizaciones especializadas. En Colombia
-              puedes contactar a <strong className="text-mx-green-dark">Coljuegos: 01 8000 113 113</strong>.
-            </p>
-          </div>
-        </div>
+          <p className="text-sm text-gray-800 leading-relaxed mb-2">
+            El juego debe ser una actividad de entretenimiento. Nunca apuestes más de lo que puedas
+            permitirte perder y mantén siempre hábitos de juego responsable.
+          </p>
+          <p className="text-sm text-gray-800 leading-relaxed">
+            Si el juego se convierte en un problema, busca ayuda en organizaciones especializadas.
+            En México puedes llamar a la{" "}
+            <strong className="text-gray-900">Línea de la Vida: 800 911 2000</strong> o a{" "}
+            <strong className="text-gray-900">Jugadores Anónimos México: 55 5544 3031</strong>.
+          </p>
+        </section>
       </div>
     </div>
   )

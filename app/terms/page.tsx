@@ -1,17 +1,3 @@
-import {
-  FileText,
-  CheckCircle2,
-  Info,
-  UserCheck,
-  AlertCircle,
-  ExternalLink,
-  Shield,
-  Copyright,
-  Scale,
-  Lock,
-  Edit3,
-  Flag,
-} from "lucide-react"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
 
@@ -24,116 +10,135 @@ const juegoResp = [
 
 export default function TermsPage() {
   return (
-    <div className="container mx-auto px-4 py-6 sm:py-8 max-w-5xl">
+    <div className="container mx-auto px-4 py-8 sm:py-10 max-w-5xl">
       <PageHero
-        icon={FileText}
-        badge="TÉRMINOS Y CONDICIONES"
+        badge="Términos y condiciones"
         title="Términos y Condiciones"
-        subtitle="Reglas de uso de Mejores Apuestas Colombia"
+        subtitle="Reglas y condiciones de uso del sitio Mejores Apuestas México."
         updatedAt
       />
 
-      <div className="space-y-4">
-        <InfoCard accent="yellow" icon={CheckCircle2} title="1. Aceptación de Términos">
+      <div className="space-y-5">
+        <InfoCard number="01" title="Aceptación de Términos">
           <p>
-            Al acceder y usar <strong>Mejores Apuestas Colombia</strong>, aceptas cumplir con los términos y
-            disposiciones de este acuerdo. Si no estás de acuerdo, por favor no utilices el sitio.
+            Al acceder y usar <strong>Mejores Apuestas México</strong>, aceptas cumplir con los
+            términos y disposiciones de este acuerdo. Si no estás de acuerdo, por favor no utilices
+            el sitio.
           </p>
         </InfoCard>
 
-        <InfoCard accent="blue" icon={Info} title="2. Propósito del Sitio">
+        <InfoCard number="02" title="Propósito del Sitio">
           <p>
-            Este sitio web proporciona información y reseñas sobre casas de apuestas disponibles en Colombia. Somos
-            un servicio de comparación independiente y <strong>no operamos servicios de juego</strong> nosotros
-            mismos.
+            Este sitio web proporciona información y reseñas sobre casas de apuestas disponibles en
+            México. Somos un servicio de comparación independiente y{" "}
+            <strong>no operamos servicios de juego</strong> nosotros mismos.
           </p>
         </InfoCard>
 
-        <InfoCard accent="red" icon={UserCheck} title="3. Restricción de Edad (+18)">
+        <InfoCard number="03" title="Restricción de Edad (+18)">
           <p>
-            Debes tener al menos <strong>18 años</strong> para usar este sitio. El juego está restringido a adultos.
-            Tomamos en serio la verificación de edad y promovemos el juego responsable conforme a la regulación de{" "}
-            <strong>Coljuegos</strong>.
+            Debes tener al menos <strong>18 años</strong> para usar este sitio. El juego está
+            restringido a adultos. Tomamos en serio la verificación de edad y promovemos el juego
+            responsable conforme a la <strong>Ley Federal de Juegos y Sorteos</strong> y su
+            Reglamento, bajo supervisión de la <strong>SEGOB</strong>.
           </p>
         </InfoCard>
 
-        <InfoCard accent="yellow" icon={AlertCircle} title="4. Precisión de la Información">
+        <InfoCard number="04" title="Precisión de la Información">
           <p>
-            Aunque nos esforzamos por brindar información precisa y actualizada, no podemos garantizar la exactitud
-            de todo el contenido. Las cuotas, bonos y términos pueden cambiar sin previo aviso.
+            Aunque nos esforzamos por brindar información precisa y actualizada, no podemos
+            garantizar la exactitud de todo el contenido. Las cuotas, bonos y términos pueden
+            cambiar sin previo aviso.
           </p>
         </InfoCard>
 
-        <InfoCard accent="blue" icon={ExternalLink} title="5. Enlaces a Terceros">
+        <InfoCard number="05" title="Enlaces a Terceros">
           <p>
-            Nuestro sitio contiene enlaces a casas de apuestas externas. No somos responsables del contenido,
-            términos o prácticas de estos sitios. Revisa sus términos y condiciones antes de usarlos.
+            Nuestro sitio contiene enlaces a casas de apuestas externas. No somos responsables del
+            contenido, términos o prácticas de estos sitios. Revisa sus términos y condiciones
+            antes de usarlos.
           </p>
         </InfoCard>
 
-        <InfoCard accent="red" icon={Shield} title="6. Juego Responsable">
+        <InfoCard number="06" title="Juego Responsable">
           <p>Promovemos el juego responsable y alentamos a nuestros usuarios a:</p>
-          <ul className="space-y-1.5 pt-1">
+          <ul className="mt-3 divide-y divide-gray-200 border-y border-gray-200">
             {juegoResp.map((j, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-mx-red mt-0.5 flex-shrink-0" />
-                <span>{j}</span>
+              <li key={i} className="py-2 text-sm text-gray-800">
+                — {j}
               </li>
             ))}
           </ul>
         </InfoCard>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <InfoCard accent="yellow" icon={Copyright} title="7. Propiedad Intelectual">
-            <p>
-              Todo el contenido de este sitio, incluyendo textos, gráficos, logos e imágenes, es propiedad de
-              Mejores Apuestas Colombia y está protegido por leyes colombianas de derechos de autor.
+        <section className="bg-white border border-gray-200 p-5 sm:p-6">
+          <h3 className="flex items-baseline gap-3 text-sm sm:text-base font-bold uppercase tracking-wider text-gray-900 border-b border-gray-200 pb-2 mb-3">
+            <span className="text-mx-green-dark font-extrabold tabular-nums">07 · 08</span>
+            <span>Propiedad Intelectual y Responsabilidad</span>
+          </h3>
+          <dl className="divide-y divide-gray-200 border-y border-gray-200">
+            <div className="py-3 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
+              <dt className="text-xs font-bold uppercase tracking-[0.18em] text-gray-900">
+                Propiedad Intelectual
+              </dt>
+              <dd className="text-sm text-gray-700 leading-relaxed">
+                Todo el contenido de este sitio, incluyendo textos, gráficos, logos e imágenes, es
+                propiedad de Mejores Apuestas México y está protegido por la Ley Federal del Derecho
+                de Autor de México.
+              </dd>
+            </div>
+            <div className="py-3 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
+              <dt className="text-xs font-bold uppercase tracking-[0.18em] text-gray-900">
+                Limitación de Responsabilidad
+              </dt>
+              <dd className="text-sm text-gray-700 leading-relaxed">
+                No seremos responsables por daños directos, indirectos, incidentales o consecuentes
+                derivados del uso de este sitio o la información aquí contenida.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <InfoCard number="09" title="Privacidad">
+          <p>
+            Tu privacidad es importante. Revisa nuestra Política de Privacidad para entender cómo
+            recopilamos, usamos y protegemos tu información conforme a la{" "}
+            <strong>
+              Ley Federal de Protección de Datos Personales en Posesión de los Particulares
+              (LFPDPPP)
+            </strong>
+            .
+          </p>
+        </InfoCard>
+
+        <InfoCard number="10" title="Cambios en los Términos">
+          <p>
+            Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios
+            serán efectivos inmediatamente tras su publicación en este sitio.
+          </p>
+        </InfoCard>
+
+        <InfoCard number="11" title="Ley Aplicable">
+          <p>
+            Estos términos se regirán e interpretarán de acuerdo con las leyes de los{" "}
+            <strong>Estados Unidos Mexicanos</strong>. Solo se recomiendan operadores con permiso
+            vigente otorgado por la <strong>SEGOB</strong> (Dirección General de Juegos y Sorteos).
+          </p>
+        </InfoCard>
+
+        <section className="bg-white border border-gray-900">
+          <div className="flex h-1 w-full">
+            <div className="flex-1 bg-mx-green"></div>
+            <div className="flex-1 bg-gray-900"></div>
+            <div className="flex-1 bg-mx-red"></div>
+          </div>
+          <div className="p-5 sm:p-6 text-center">
+            <p className="text-sm text-gray-900 font-semibold tracking-wide">
+              +18 · Solo para residentes en México · Operadores regulados por la SEGOB · El juego
+              puede ser adictivo — Juega con responsabilidad.
             </p>
-          </InfoCard>
-          <InfoCard accent="blue" icon={Scale} title="8. Limitación de Responsabilidad">
-            <p>
-              No seremos responsables por daños directos, indirectos, incidentales o consecuentes derivados del
-              uso de este sitio o la información aquí contenida.
-            </p>
-          </InfoCard>
-        </div>
-
-        <InfoCard accent="blue" icon={Lock} title="9. Privacidad">
-          <p>
-            Tu privacidad es importante. Revisa nuestra Política de Privacidad para entender cómo recopilamos,
-            usamos y protegemos tu información conforme a la <strong>Ley 1581 de 2012</strong> de Colombia.
-          </p>
-        </InfoCard>
-
-        <InfoCard accent="red" icon={Edit3} title="10. Cambios en los Términos">
-          <p>
-            Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán efectivos
-            inmediatamente tras su publicación en este sitio.
-          </p>
-        </InfoCard>
-
-        <InfoCard accent="yellow" icon={Flag} title="11. Ley Aplicable">
-          <p>
-            Estos términos se regirán e interpretarán de acuerdo con las leyes de la{" "}
-            <strong>República de Colombia</strong>. Solo se recomiendan operadores licenciados por{" "}
-            <strong>Coljuegos</strong>.
-          </p>
-        </InfoCard>
-      </div>
-
-      {/* Фінальний disclaimer */}
-      <div className="mt-8 rounded-lg overflow-hidden border border-mx-red/30">
-        <div className="flex h-1 w-full">
-          <div className="flex-1 bg-mx-green"></div>
-          <div className="flex-1 bg-white"></div>
-          <div className="flex-1 bg-mx-red"></div>
-        </div>
-        <div className="bg-mx-red/5 p-5 text-center">
-          <p className="text-sm text-mx-red-dark font-semibold">
-            +18 | Solo para residentes en Colombia | Operadores licenciados por Coljuegos | El juego puede ser
-            adictivo — Juega con responsabilidad.
-          </p>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   )
