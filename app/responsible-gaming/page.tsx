@@ -1,5 +1,20 @@
+import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
+
+export const metadata: Metadata = {
+  title: "Juego responsable",
+  description:
+    "Guía de juego responsable en México: principios clave, señales de alerta, herramientas de autocontrol y organizaciones oficiales de apoyo (SEGOB, Línea de la Vida, Jugadores Anónimos MX).",
+  alternates: { canonical: "/responsible-gaming" },
+  openGraph: {
+    title: "Juego responsable | Mejores Apuestas México",
+    description:
+      "Principios, señales de alerta y recursos oficiales de apoyo contra la ludopatía en México.",
+    url: "/responsible-gaming",
+    type: "article",
+  },
+}
 
 const principios = [
   {

@@ -1,5 +1,20 @@
+import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
+
+export const metadata: Metadata = {
+  title: "Sobre nosotros",
+  description:
+    "Guía editorial independiente dedicada al análisis y la comparación de casas de apuestas con permiso vigente de la SEGOB en los Estados Unidos Mexicanos.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "Sobre nosotros | Mejores Apuestas México",
+    description:
+      "Metodología, criterios de evaluación y promesa editorial de Mejores Apuestas México.",
+    url: "/about",
+    type: "article",
+  },
+}
 
 const criterios = [
   { label: "Licencia y Regulación", text: "Solo destacamos plataformas con permiso vigente otorgado por la SEGOB (DGJS)." },

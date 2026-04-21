@@ -1,5 +1,21 @@
+import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
+
+export const metadata: Metadata = {
+  title: "Política de privacidad",
+  description:
+    "Política de privacidad de Mejores Apuestas México conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) e INAI. Tratamiento de datos y derechos ARCO.",
+  alternates: { canonical: "/privacy-policy" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Política de privacidad | Mejores Apuestas México",
+    description:
+      "Tratamiento y protección de datos personales conforme a la LFPDPPP y supervisión del INAI.",
+    url: "/privacy-policy",
+    type: "article",
+  },
+}
 
 const datos = [
   "Nombre completo y correo electrónico.",

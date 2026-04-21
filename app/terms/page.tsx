@@ -1,5 +1,20 @@
+import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
+
+export const metadata: Metadata = {
+  title: "Términos y condiciones",
+  description:
+    "Términos y condiciones de uso de Mejores Apuestas México. Jurisdicción: Estados Unidos Mexicanos. Regulación: SEGOB (DGJS). Ley Federal de Juegos y Sorteos.",
+  alternates: { canonical: "/terms" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Términos y condiciones | Mejores Apuestas México",
+    description: "Reglas y condiciones de uso del sitio Mejores Apuestas México.",
+    url: "/terms",
+    type: "article",
+  },
+}
 
 const juegoResp = [
   "Establecer límites de tiempo y dinero en el juego.",

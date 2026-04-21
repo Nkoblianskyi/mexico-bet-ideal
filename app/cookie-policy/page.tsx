@@ -1,5 +1,20 @@
+import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { InfoCard } from "@/components/info-card"
+
+export const metadata: Metadata = {
+  title: "Política de cookies",
+  description:
+    "Política de cookies de Mejores Apuestas México: qué son las cookies, cómo las usamos, tipos utilizados, cookies de terceros y cómo gestionar tus preferencias.",
+  alternates: { canonical: "/cookie-policy" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Política de cookies | Mejores Apuestas México",
+    description: "Uso y gestión de cookies en el sitio Mejores Apuestas México.",
+    url: "/cookie-policy",
+    type: "article",
+  },
+}
 
 const tipos = [
   { title: "Cookies necesarias", text: "Requeridas para el funcionamiento básico y la navegación del sitio." },
