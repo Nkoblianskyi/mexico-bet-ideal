@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Cookie } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -39,9 +38,6 @@ export function CookieBanner() {
       <div className="bg-gradient-to-r from-gray-950 via-mx-green-dark/70 to-gray-950 text-white">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center gap-4">
           <div className="flex items-start md:items-center gap-3 flex-1">
-            <div className="w-9 h-9 rounded-md bg-mx-green/20 border border-mx-green/40 flex items-center justify-center flex-shrink-0">
-              <Cookie className="w-5 h-5 text-mx-green" />
-            </div>
             <p className="text-sm leading-snug">
               Usamos cookies para mejorar tu experiencia en <span className="font-bold">Mejores Apuestas México</span>.
               Al continuar navegando, aceptas nuestro uso de cookies.{" "}
